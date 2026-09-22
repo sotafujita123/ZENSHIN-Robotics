@@ -1,26 +1,186 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>タイトル</title>
-    <!-- CSSの読み込み -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZENSHIN - 郁秋祭2026 特設サイト</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f6f9;
+      color: #333;
+    }
+    header {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 2.5rem 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    header p {
+      margin-top: 0.5rem;
+      opacity: 0.9;
+      font-size: 1rem;
+    }
+    .nav-tabs {
+      display: flex;
+      justify-content: center;
+      background: #e0e6ed;
+      border-bottom: 2px solid #ccc;
+    }
+    .tab-btn {
+      padding: 1rem 1.5rem;
+      border: none;
+      background: none;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: bold;
+      color: #555;
+      transition: all 0.2s;
+    }
+    .tab-btn:hover {
+      background: #d0d7de;
+    }
+    .tab-btn.active {
+      color: #003366;
+      border-bottom: 3px solid #003366;
+      background: white;
+    }
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .tab-content {
+      display: none;
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .tab-content.active {
+      display: block;
+    }
+    h2 {
+      color: #003366;
+      border-bottom: 2px solid #e0e6ed;
+      padding-bottom: 0.5rem;
+      margin-top: 0;
+    }
+    .card {
+      background: #f9fbfd;
+      border-left: 4px solid #003366;
+      padding: 1.2rem;
+      margin-bottom: 1.2rem;
+      border-radius: 4px;
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #003366;
+    }
+    ul {
+      padding-left: 1.2rem;
+      line-height: 1.6;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Webサイトへようこそ</h1>
-    </header>
 
-    <main>
-        <p>ここにメインコンテンツを記述します。</p>
-    </main>
+  <header>
+    <h1>ZENSHIN Robotics Team</h1>
+    <p>未来をつくるのは、今を挑戦する私たち。</p>
+  </header>
 
-    <footer>
-        <p>&copy; 2026 Sample Web Site</p>
-    </footer>
+  <div class="nav-tabs">
+    <button class="tab-btn active" onclick="openTab(event, 'home')">ホーム</button>
+    <button class="tab-btn" onclick="openTab(event, 'exhibits')">機能・出展一覧</button>
+    <button class="tab-btn" onclick="openTab(event, 'access')">設定・詳細</button>
+  </div>
 
-    <!-- JavaScriptの読み込み -->
-    <script src="script.js"></script>
+  <div class="container">
+    <!-- ホーム -->
+    <div id="home" class="tab-content active">
+      <h2>郁文館文化祭「郁秋祭2026」のご案内</h2>
+      <p>見て、触れて、感じるロボットの世界へようこそ！</p>
+      <p>一般社団法人ZENSHINでは、郁秋祭2026にて大型ロボット（FRC）の機体展示や操縦体験、小型ロボット（FLL）のプログラミング体験ブースを出展いたします。</p>
+      
+      <div class="card">
+        <h3>開催概要</h3>
+        <ul>
+          <li><strong>開催日：</strong>2026年9月26日(土)・27日(日)</li>
+          <li><strong>場所：</strong>郁文館夢学園（212教室・講堂）</li>
+          <li><strong>入場方法：</strong>予約不要・上履き不要</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 出展内容 -->
+    <div id="exhibits" class="tab-content">
+      <h2>出展・企画内容</h2>
+      
+      <div class="card">
+        <h3>1. 教室展示（場所：212教室）</h3>
+        <ul>
+          <li><strong>FRC (FIRST Robotics Competition) 展示：</strong>大会で実際に稼働した大型ロボットの迫力を間近でご覧いただけます。</li>
+          <li><strong>FLL (FIRST LEGO League) 展示・体験：</strong>プログラミングや機構の解説に加え、実際にロボットを動かせる体験コーナーをご用意。</li>
+          <li><strong>海外チーム交流展：</strong>国際大会で交流した海外チームのユニフォームや記念品を多数展示。</li>
+          <li><strong>参加型レゴアート：</strong>来場者の皆様と一緒に完成を目指す参加型企画です。</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>2. 特別イベント：ロボット操縦体験（場所：講堂）</h3>
+        <p>講堂の特設ステージにて、実際に大型ロボットの操縦をご体験いただけます！</p>
+        <ul>
+          <li><strong>9月26日(土)：</strong>15:00 〜 16:00</li>
+          <li><strong>9月27日(日)：</strong>9:00 〜 10:00</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 設定・詳細 -->
+    <div id="access" class="tab-content">
+      <h2>日時・アクセス詳細</h2>
+      
+      <div class="card">
+        <h3>開催日時</h3>
+        <ul>
+          <li>9月26日(土) 9:00 〜 16:00</li>
+          <li>9月27日(日) 9:00 〜 15:00</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>会場アクセス</h3>
+        <p><strong>郁文館中学校・高等学校</strong><br>
+        〒113-0023 東京都文京区向丘2-19-1<br>
+        （212教室 / 講堂ステージ）</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openTab(evt, tabName) {
+      const contents = document.getElementsByClassName("tab-content");
+      for (let i = 0; i < contents.length; i++) {
+        contents[i].classList.remove("active");
+      }
+      const buttons = document.getElementsByClassName("tab-btn");
+      for (let i = 0; i < buttons.length; i++) {
+        buttons[i].classList.remove("active");
+      }
+      document.getElementById(tabName).classList.add("active");
+      evt.currentTarget.classList.add("active");
+    }
+  </script>
+
 </body>
 </html>
